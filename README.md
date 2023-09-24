@@ -16,7 +16,7 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Description
-This repository is dedicated to the students of CSCI240 (Computing II). It houses an Open-Source C++ Utility Library that captures a vast array of algorithms and data structures covered throughout the semester. The library is designed to be a practical tool for both current and future batches, blending theoretical understanding with real-world application.
+This repository is dedicated to the students of CSCI240 (Computing II). It houses an Open-Source C++ Utility Library that captures a vast array of algorithms and data structures covered throughout the semester. The library is designed to be a practical tool for both current and future batches, blending theoretical understanding with real-world application. Contributing to this repository may also be a way to better prepare yourself for CSCI36200 (Data Structures and Algorithms)
 
 ## Goals
 - **Knowledge Repository:** Serve as a go-to resource for current and future students, assisting them in reviewing and understanding key course concepts.
@@ -53,6 +53,4 @@ This project is licensed under the MIT License. For more details, see the `LICEN
 - The dedicated faculty and students of CSCI240.
 - All contributors and supporters of this project.
 
----
 
-© 2023 CSCI240 Teaching Team. All rights reserved.
