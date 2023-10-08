@@ -29,10 +29,10 @@ Instructions on how to clone and use the library locally will be provided as dev
 Detailed documentation on specific algorithms, data structures, and utility functions will be made available in the respective directories. 
 
 ## Directory Structure
-- `algorithms/`: Contains implementations of key algorithms.
-- `data-structures/`: Houses various data structure implementations.
-- `tests/`: Unit tests for the library components.
-- `documentation/`: In-depth descriptions, use-cases, and examples for each algorithm and data structure.
+- `Algorithms/`: Contains implementations of key algorithms.
+- `Data-Structures/`: Houses various data structure implementations.
+- `Tests/`: Unit tests for the library components.
+- `Documentation/`: In-depth descriptions, use-cases, and examples for each algorithm and data structure.
 
 ## Contributing
 We welcome contributions from students and educators alike. If you wish to contribute:
