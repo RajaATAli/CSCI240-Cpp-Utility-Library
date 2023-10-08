@@ -41,7 +41,7 @@ We welcome contributions from students and educators alike. If you wish to contr
 2. Create a new branch for your feature or fix.
 3. Submit a pull request.
 
-For detailed guidelines, please refer to the `CONTRIBUTING.md` file (to be added).
+For detailed guidelines, please refer to the `CONTRIBUTING.md` file.
 
 ## Feedback and Issues
 If you encounter any issues or wish to provide feedback, please open an issue on this repository. Your insights and feedback are invaluable to improving this resource for everyone.
