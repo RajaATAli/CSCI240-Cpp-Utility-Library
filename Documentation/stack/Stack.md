@@ -1,5 +1,5 @@
 
-#Stack
+# Stack
 
 A stack is a first in last out (FILO) data structure because the first elements added to a stack are
 going to be the last elements removed from the stack.
@@ -10,7 +10,7 @@ in order to access the plate to be removed. Plates can't just be removed from th
 
 This means that in order to traverse a stack elements must be accessed one by one ( O(n) time complexity ).
 
-##Use Cases
+## Use Cases
 
 A good example of where a stack is most important is in the heart of memory of software.
 
