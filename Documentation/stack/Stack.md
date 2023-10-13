@@ -1,14 +1,16 @@
-**Stack**
+
+#Stack
 
 A stack is a first in last out (FILO) data structure because the first elements added to a stack are
 going to be the last elements removed from the stack.
 
-Think of a stack like a stack of plates. You must add a plate onto the top of the stack
-and when you want to remove a plate from the middle you must remove all the plates on top
-in order to access the plate you want to remove. You can't just remove the plate from the middle.
+Think of a stack like a stack of plates. Plates must be add onto the top of the stack
+and when a plate should be removed all the plates on top must also be removed
+in order to access the plate to be removed. Plates can't just be removed from the middle.
 
-This means that in order to traverse a stack you must go through each and every element in the stack. This
-would mean time complexity of O(n).
+This means that in order to traverse a stack elements must be accessed one by one ( O(n) time complexity ).
+
+##Use Cases
 
 A good example of where a stack is most important is in the heart of memory of software.
 
