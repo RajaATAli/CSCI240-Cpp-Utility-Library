@@ -1,5 +1,8 @@
 #ifndef ARRAY_H
 #define ARRAY_H
+#include <iostream>
+#include <algorithm>
+
 
 template<typename T>
 
@@ -62,7 +65,7 @@ Array<T>::~Array() {
 // Inserting
 template<typename T>
 void Array<T>::Insert(int index, const T& element) {
-    if (index < 0 || index > size) {
+    if (index < 0 || index > length) {
         std::cerr << "Error: Cannot insert because the index is out of bounds." << std::endl;
         return;
     }
@@ -131,6 +134,8 @@ void Array<T>::Update(int index, const T& value){
 // You should be altering the capacity (`size`) and not `length`
 template<typename T>
 void Array<T>::Resize(int new_size){
+    if (new_size == size) return;
+
     // Check if the new size is valid
     if (new_size <= 0) {
         std::cerr << "Error: Invalid size provided for resize." << std::endl;

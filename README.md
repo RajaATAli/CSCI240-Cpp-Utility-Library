@@ -26,7 +26,7 @@ This repository is dedicated to the students of CSCI240 (Computing II). It house
 Instructions on how to clone and use the library locally will be provided as development progresses.
 
 ## Usage
-Detailed documentation on specific algorithms, data structures, and utility functions will be made available in the respective directories. 
+Detailed documentation on specific algorithms, data structures, and utility functions will be made available in the respective directories. For practical examples and to understand how to use each algorithm or data structure, refer to the accompanying `demonstration.cpp` file provided in the respective directories.
 
 ## Directory Structure
 - `Algorithms/`: Contains implementations of key algorithms.
