@@ -1,4 +1,3 @@
-// QueueDemo.cpp
 #include <iostream>
 #include "Queue.h"
 
@@ -23,6 +22,21 @@ int main() {
     }
     std::cout << std::endl;
 
+    std::cout << "Enqueuing 5, 10, 15, 20 again" << std::endl;
+    myQueue.enqueue(5);
+    myQueue.enqueue(10);
+    myQueue.enqueue(15);
+    myQueue.enqueue(20);
+
+    std::cout << "Reversing the queue" << std::endl;
+    myQueue.reverseQueue();
+
+    std::cout << "Dequeuing elements after reversing: ";
+    while (!myQueue.isEmpty()) {
+        std::cout << myQueue.dequeue() << " ";
+    }
+    std::cout << std::endl;
+
     std::cout << "Enqueuing 30" << std::endl;
     myQueue.enqueue(30);
     std::cout << "Clearing the queue" << std::endl;
@@ -32,3 +46,4 @@ int main() {
 
     return 0;
 }
+

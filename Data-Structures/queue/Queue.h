@@ -23,6 +23,7 @@ public:
         clear();
     }
 
+
     void enqueue(T data) {
         Node* newNode = new Node(data);
         if (isEmpty()) {
@@ -86,6 +87,15 @@ public:
 
     int getSize() const {
         return size;
+    }
+
+    void reverseQueue() {
+        if (isEmpty()) {
+            return;
+        }
+        T data = dequeue();
+        reverseQueue();
+        enqueue(data);
     }
 };
 
