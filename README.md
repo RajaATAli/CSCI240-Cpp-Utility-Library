@@ -44,7 +44,7 @@ We welcome contributions from students and educators alike. If you wish to contr
 For detailed guidelines, please refer to the `CONTRIBUTING.md` file.
 
 ## Feedback and Issues
-If you encounter any issues or wish to provide feedback, please open an issue on this repository. Your insights and feedback are invaluable to improving this resource for everyone.
+If you encounter any issues or wish to provide feedback, please open an issue on this repository. Your insights and feedback are invaluable to improving this resource for everyone. If you have any other questions, please contact the project maintainer, Raja Allmdar Tariq Ali - [!rajaali@iu.edu](mailto:rajaali@iu.edu)
 
 ## License
 This project is licensed under the MIT License. For more details, see the `LICENSE` file.

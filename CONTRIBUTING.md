@@ -66,4 +66,4 @@ Please adhere to the following principles:
 
 ## Questions?
 
-If you have any questions or need further clarification, please don't hesitate to reach out via email - **rajaali@iu.edu**
+If you have any questions or need further clarification, please don't hesitate to reach out via email - [!rajaali@iu.edu](mailto:rajaali@iu.edu)
