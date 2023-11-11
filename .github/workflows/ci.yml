@@ -23,8 +23,12 @@ jobs:
         make
         sudo make install
 
-    - name: Build and Test
+    - name: Build project
       run: |
         make
-        make test
+
+    - name: Run tests
+      run: |
+        ./test
+
 
