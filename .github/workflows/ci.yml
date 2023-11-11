@@ -22,6 +22,10 @@ jobs:
         ./configure
         make
         sudo make install
+    
+    - name: Set library path
+      run: |
+        echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib" >> $GITHUB_ENV
 
     - name: Build project
       run: |
