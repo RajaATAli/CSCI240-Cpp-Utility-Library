@@ -22,11 +22,42 @@ This repository is dedicated to the students of CSCI240 (Computing II). It house
 - **Knowledge Repository:** Serve as a go-to resource for current and future students, assisting them in reviewing and understanding key course concepts.
 - **Hands-on Experience:** Provide students with the opportunity to apply theoretical knowledge in a real-world coding and collaborative environment.
 
-## Installation
-Instructions on how to clone and use the library locally will be provided as development progresses.
+## Installation and Usage
+To get started with the CSCI240 C++ Utility Library, follow these steps to clone the repository and set up the library on your local machine.
 
-## Usage
-Detailed documentation on specific algorithms, data structures, and utility functions will be made available in the respective directories. For practical examples and to understand how to use each algorithm or data structure, refer to the accompanying `demonstration.cpp` file provided in the respective directories.
+##### Prerequisites
+- A modern C++ compiler (supporting at least C++98 standard)
+- Git (for cloning the repository)
+
+##### Steps
+1. **Clone the repository within your environment**
+`git clone https://github.com/your-username/CSCI240-Cpp-Utility-Library.git`
+2. **Include the header files in your project by adding the following line to your C++ source files**
+`#include "path/to/CSCI240-Cpp-Utility-Library/Data-Structures/Specific-Data-Structure/your_desired_header.h"`
+3. **Running Unit Tests (if needed)**
+The library includes unit tests to ensure the reliability and correctness of its components. These tests are written using the CppUnit framework. Follow these steps to compile and run the unit tests:
+
+- CppUnit library installed on your system.
+- A modern C++ compiler (the library is configured for g++ with C++11 standard).
+- Compile the Tests by navigating to the root directory of the CSCI240 C++ Utility Library.
+`make test`
+- After compilation, an executable named `test` is generated. Run the tests by executing:
+`./test`
+- To clean up generated object files and executables
+`make clean`
+
+##### Writing New Tests
+- If you wish to add new tests, create a `.cpp` file in the `Tests/` directory.
+- Make sure to register the test suite and include necessary headers.
+
+##### Exploring and Running Demonstrations
+- The actual implementations of algorithms and data structures are located in their respective directories. Browsing through these files will help you understand the coding patterns and implementations in C++.
+- To see an algorithm or data structure in action, compile and run the respective `demonstration.cpp` file. For example, if you are in the `Algorithms/Sorting/` directory, you can compile and run the BubbleSort demonstration as follows:
+```
+g++ -o BubbleSortDemo BubbleDemo.cpp
+./BubbleSortDemo
+```
+
 
 ## Directory Structure
 - `Algorithms/`: Contains implementations of key algorithms.
