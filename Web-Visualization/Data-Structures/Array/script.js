@@ -1,6 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Example array data
-  const arrayData = [5, 10, 15, 20, 25, 30, 35, 40];
+  let arrayData = [5, 10, 15, 20, 25, 30, 35, 40];
+
+  // Functions to add and remove elements
+  function addElement() {
+    const newValue = Math.floor(Math.random() * 100);
+    arrayData.push(newValue);
+    updateArray();
+  }
+
+  function removeElement() {
+    arrayData.pop();
+    updateArray();
+  }
+
+  // Update array visualization
+  function updateArray() {
+    // Adjust SVG container size based on array length
+    svg.attr('width', arrayData.length * (barWidth + barSpacing));
+
+    // Update the bars, text labels, and indexes
+    // [Include logic here for handling the enter, update, and exit selections]
+    // Don't forget to add transitions for animating changes
+  }
+
+  // Event listeners for buttons
+  document.getElementById('addElement').addEventListener('click', addElement);
+  document.getElementById('removeElement').addEventListener('click', removeElement);
+
 
   // SVG container dimensions
   const width = 500;
