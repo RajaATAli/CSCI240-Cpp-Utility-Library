@@ -3,6 +3,7 @@
 #include <cppunit/ui/text/TestRunner.h>
 #include <cppunit/TextOutputter.h>
 #include "../Data-Structures/arrays/Array.h"
+#include "StackTest.h"
 
 template<typename T>
 class ArrayTest : public CppUnit::TestFixture {
@@ -57,6 +58,9 @@ CPPUNIT_TEST_SUITE_REGISTRATION(ArrayTest<int>);
 int main(int argc, char* argv[]) {
     CppUnit::TextUi::TestRunner runner;
     runner.addTest(ArrayTest<int>::suite());
+
+    // Register StackTest suite
+    runner.addTest(StackTest<int>::suite());
     runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cerr));
     bool wasSuccessful = runner.run();
     return wasSuccessful ? 0 : 1;
