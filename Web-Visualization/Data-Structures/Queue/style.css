@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#queueContainer {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#message {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.queueElement {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+  min-width: 50px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+input, button {
+  margin: 10px;
+}
