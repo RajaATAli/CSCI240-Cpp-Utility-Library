@@ -48,14 +48,20 @@ function enqueue() {
 
 // Function to handle dequeue action
 function dequeue() {
-    if (queue.length > 0) {
-        const dequeued = queue.shift();
-        renderQueue();
-        showMessage(`Dequeued: ${dequeued}`);
-    } else {
-        showMessage('Queue is empty', false);
-    }
+  if (queue.length > 0) {
+      const dequeuedElement = queueContainer.children[0]; // Get the first element in the queue
+      dequeuedElement.classList.add('dequeued');
+
+      setTimeout(() => {
+          queue.shift();
+          renderQueue();
+          showMessage(`Dequeued: ${dequeuedElement.innerText}`);
+      }, 1000); // Wait for the animation to finish before re-rendering the queue
+  } else {
+      showMessage('Queue is empty', false);
+  }
 }
+
 
 // Initial render of the queue
 renderQueue();

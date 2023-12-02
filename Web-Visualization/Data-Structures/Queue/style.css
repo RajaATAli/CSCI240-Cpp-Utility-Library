@@ -27,3 +27,22 @@ body {
 input, button {
   margin: 10px;
 }
+
+.dequeued {
+  animation: floatOut 1s ease forwards, fadeOut 1s ease forwards;
+  color: red; 
+}
+
+@keyframes floatOut {
+  to {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+      opacity: 0;
+  }
+}
+
