@@ -14,6 +14,7 @@ body {
 }
 
 .node-container {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -29,6 +30,16 @@ body {
   /*transform: scale(1);*/
   opacity: 1;
 }
+
+.node-label {
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
 
 .node.new-node{
   transform: scale(0.1);

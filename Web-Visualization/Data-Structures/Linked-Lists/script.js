@@ -54,31 +54,39 @@ class LinkedList {
   }
 
   updateDisplay() {
-      const container = d3.select('#linkedListContainer');
-      container.selectAll('*').remove();
+    const container = d3.select('#linkedListContainer');
+    container.selectAll('*').remove();
+    const nodeContainer = container.selectAll('.node-container')
+      .data(this.nodes)
+      .enter()
+      .append('div')
+      .classed('node-container', true);
 
-      const nodeContainer = container.selectAll('.node-container')
-          .data(this.nodes)
-          .enter()
-          .append('div')
-          .classed('node-container', true);
+    nodeContainer.append('div')
+      .classed('node-text', true)
+      .text(d => d);
 
-      nodeContainer.append('div')
-          .classed('node', true)
-          .classed('new-node', (d,i) => i === this.nodes.length - 1) // Animate the new node
-          .text(d => d);
+    // Append a new div for the node label
+    const nodeLabel = nodeContainer.append('div')
+      .classed('node-label', true);
 
-      nodeContainer.each(function(d, i, nodes) {
-          if (i !== nodes.length - 1) {
-              d3.select(this).append('div')
-                .classed('arrow', true)
-                .html('&#x2192;');
-          }
+    // Add the text to the new div
+    nodeLabel.append('span')
+      .attr('class', (d, i) => {
+        if (i === 0) return 'head';
+        if (i === this.nodes.length - 1) return 'tail';
+        return '';
+      })
+      .text((d, i) => {
+        if (i === 0) return 'Head';
+        if (i === this.nodes.length - 1) return 'Tail';
+        return '';
       });
-      
-      setTimeout(() => {
-          d3.selectAll('.node.new-node').classed('new-node', false); // Animate the nodes
-      }, 50);
+
+
+    setTimeout(() => {
+        d3.selectAll('.node.new-node').classed('new-node', false); // Animate the nodes
+    }, 50);
 
       nodeContainer.each(function(d, i, nodes) {
           if (i !== nodes.length - 1) {
