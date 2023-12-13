@@ -23,7 +23,7 @@ class LinkedList {
           current.next = newNode;
       }
       this.updateNodes();
-      this.updateDisplay();
+      setTimeout(() => { this.updateDisplay(); }, 1000);
   }
 
   deleteFromEnd() {
@@ -65,7 +65,20 @@ class LinkedList {
 
       nodeContainer.append('div')
           .classed('node', true)
+          .classed('new-node', (d,i) => i === this.nodes.length - 1) // Animate the new node
           .text(d => d);
+
+      nodeContainer.each(function(d, i, nodes) {
+          if (i !== nodes.length - 1) {
+              d3.select(this).append('div')
+                .classed('arrow', true)
+                .html('&#x2192;');
+          }
+      });
+      
+      setTimeout(() => {
+          d3.selectAll('.node.new-node').classed('new-node', false); // Animate the nodes
+      }, 50);
 
       nodeContainer.each(function(d, i, nodes) {
           if (i !== nodes.length - 1) {
