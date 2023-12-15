@@ -82,6 +82,21 @@ search(node, data) {
   }
 }
 
+findMin() {
+  let current = this.root;
+  while (current.left !== null) {
+      current = current.left;
+  }
+  return current.data;
+}
+
+findMax() {
+  let current = this.root;
+  while (current.right !== null) {
+      current = current.right;
+  }
+  return current.data;
+}
 
 }
 
@@ -173,6 +188,30 @@ function displayMessage(message) {
   messageElement.textContent = message;
   setTimeout(() => { messageElement.textContent = ''; }, 3000);
 }
+
+function highlightMin() {
+  const minValue = bst.findMin();
+  highlightNode(minValue);
+}
+
+function highlightMax() {
+  const maxValue = bst.findMax();
+  highlightNode(maxValue);
+}
+
+function highlightNode(value) {
+  const nodes = d3.selectAll('.node')
+                  .filter((d) => d.data.data === value);
+
+  nodes.select('circle')
+       .style('stroke', 'red')
+       .style('stroke-width', '4px');
+
+  setTimeout(() => {
+      nodes.select('circle').style('stroke', 'steelblue').style('stroke-width', '3px');
+  }, 2000); // Adjust the timeout duration as needed
+}
+
 
 
 // Initializing the tree with an example
