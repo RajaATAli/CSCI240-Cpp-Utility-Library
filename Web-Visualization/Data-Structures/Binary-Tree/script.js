@@ -61,44 +61,70 @@ class BinarySearchTree {
     return node;
 }
 
-findMinNode(node) {
-    let current = node;
+  findMinNode(node) {
+      let current = node;
+      while (current.left !== null) {
+          current = current.left;
+      }
+      return current;
+  }
+
+  search(node, data) {
+    if (node === null) {
+        return false; // not found
+    }
+    if (data < node.data) {
+        return this.search(node.left, data);
+    } else if (data > node.data) {
+        return this.search(node.right, data);
+    } else {
+        return true; // found
+    }
+  }
+
+  findMin() {
+    let current = this.root;
     while (current.left !== null) {
         current = current.left;
     }
-    return current;
+    return current.data;
+  }
+
+  findMax() {
+    let current = this.root;
+    while (current.right !== null) {
+        current = current.right;
+    }
+    return current.data;
+  }
+
+  inOrderTraverse(node, callback) {
+    if (node !== null) {
+        this.inOrderTraverse(node.left, callback);
+        callback(node.data);
+        this.inOrderTraverse(node.right, callback);
+    }
 }
 
-search(node, data) {
-  if (node === null) {
-      return false; // not found
+  preOrderTraverse(node, callback) {
+      if (node !== null) {
+          callback(node.data);
+          this.preOrderTraverse(node.left, callback);
+          this.preOrderTraverse(node.right, callback);
+      }
   }
-  if (data < node.data) {
-      return this.search(node.left, data);
-  } else if (data > node.data) {
-      return this.search(node.right, data);
-  } else {
-      return true; // found
-  }
-}
 
-findMin() {
-  let current = this.root;
-  while (current.left !== null) {
-      current = current.left;
+  postOrderTraverse(node, callback) {
+      if (node !== null) {
+          this.postOrderTraverse(node.left, callback);
+          this.postOrderTraverse(node.right, callback);
+          callback(node.data);
+      }
   }
-  return current.data;
-}
 
-findMax() {
-  let current = this.root;
-  while (current.right !== null) {
-      current = current.right;
-  }
-  return current.data;
-}
 
 }
+
 
 const bst = new BinarySearchTree();
 
@@ -210,6 +236,43 @@ function highlightNode(value) {
   setTimeout(() => {
       nodes.select('circle').style('stroke', 'steelblue').style('stroke-width', '3px');
   }, 2000); // Adjust the timeout duration as needed
+}
+
+function resetAndTraverse(traversalFunction) {
+  delay = 0;
+  traversalFunction();
+}
+
+
+function traverseInOrder() {
+  bst.inOrderTraverse(bst.root, highlightAndDelay);
+}
+
+function traversePreOrder() {
+  bst.preOrderTraverse(bst.root, highlightAndDelay);
+}
+
+function traversePostOrder() {
+  bst.postOrderTraverse(bst.root, highlightAndDelay);
+}
+
+let delay = 0;
+
+function highlightAndDelay(value) {
+  setTimeout(() => {
+      const nodes = d3.selectAll('.node')
+                      .filter((d) => d.data.data === value);
+
+      nodes.select('circle')
+           .style('stroke', 'green')
+           .style('stroke-width', '10px');
+
+      setTimeout(() => {
+          nodes.select('circle').style('stroke', 'steelblue').style('stroke-width', '3px');
+      }, 500);
+  }, delay);
+
+  delay += 500; // Increment the delay for the next node
 }
 
 
