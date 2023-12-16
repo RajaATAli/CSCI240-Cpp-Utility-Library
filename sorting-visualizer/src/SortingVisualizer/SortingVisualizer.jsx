@@ -58,13 +58,13 @@ export default class SortingVisualizer extends React.Component {
         setTimeout(() => {
           barOneStyle.backgroundColor = color; // Change color of bar one
           barTwoStyle.backgroundColor = color; // Change color of bar two
-        }, i * 4 ); // Change color every 10 milliseconds
+        }, i * 4 ); // Change color every 4 milliseconds
       } else {
         setTimeout(() => {
           const [barOneIdx, newHeight] = newAnimations[i]; // Destructuring
           const barOneStyle = arrayBars[barOneIdx].style; // Bar one style
           barOneStyle.height = `${newHeight}px`; // Change height of bar one
-        }, i * 4); // Change height every 4 milliseconds
+        }, i * 4); // Change height every 4 milliseconds        
       }
     }
   }

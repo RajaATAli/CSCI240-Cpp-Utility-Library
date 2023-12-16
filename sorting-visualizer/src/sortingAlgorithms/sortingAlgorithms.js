@@ -64,20 +64,22 @@ function doMerge(
     const animation = {}; 
     animation.comparison = [i, j];
     if (auxiliaryArray[i] <= auxiliaryArray[j]) {
-      animation.swap = [k, i];
+      animation.swap = [k, auxiliaryArray[i]]; // Use actual value
       mainArray[k++] = auxiliaryArray[i++];
     } else {
-      animation.swap = [k, j];
+      animation.swap = [k, auxiliaryArray[j]]; // Use actual value
       mainArray[k++] = auxiliaryArray[j++];
     }
     animations.push(animation);
-    while (i <= middleIdx) {
-      animations.push({ comparison: [i, i], swap: [k, i] });
-      mainArray[k++] = auxiliaryArray[i++];
-    }
-    while (j <= endIdx) {
-      animations.push({ comparison: [j, j], swap: [k, j] });
-      mainArray[k++] = auxiliaryArray[j++];
-    }
-}
+  }
+
+  while (i <= middleIdx) {
+    animations.push({ comparison: [i, i], swap: [k, auxiliaryArray[i]] }); // Use actual value
+    mainArray[k++] = auxiliaryArray[i++];
+  }
+
+  while (j <= endIdx) {
+    animations.push({ comparison: [j, j], swap: [k, auxiliaryArray[j]] }); // Use actual value
+    mainArray[k++] = auxiliaryArray[j++];
+  }
 }
