@@ -26,6 +26,7 @@ export default class SortingVisualizer extends React.Component {
   // For the animations, some sort of wrapper method above the algorithms is needed that will call the algorithms and then returns whatever algorithm we're comparing
   // And that return value will be the animations array in final sorted order
 
+  /*
   mergeSort() {
     // Actual Algorithm is in helper methods, which are called here
     const javaScriptSortedArray = this.state.array
@@ -34,7 +35,41 @@ export default class SortingVisualizer extends React.Component {
     const sortedArray = sortingAlgorithms.mergeSort(this.state.array); // Merge sort algorithm
 
     console.log(arraysAreEqual(javaScriptSortedArray, sortedArray)); // Check if arrays are equal
+  } */
+
+  mergeSort() {
+    const animations = sortingAlgorithms.mergeSort(this.state.array); // Merge sort algorithm
+    const newAnimations = [];
+
+    for (const animation of animations) {
+      newAnimations.push(animation.comparison);
+      newAnimations.push(animation.comparison);
+      newAnimations.push(animation.swap);
+    }
+
+    for (let i = 0; i < newAnimations.length; i++) {
+      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange = i % 3 !== 2; // If i is not equal to 2, then it is a color change
+      if (isColorChange) {
+        const [barOneIdx, barTwoIdx] = newAnimations[i]; // Destructuring
+        const barOneStyle = arrayBars[barOneIdx].style; // Bar one style
+        const barTwoStyle = arrayBars[barTwoIdx].style; // Bar two style
+        const color = i % 3 === 0 ? 'red' : 'turquoise'; // If i is equal to 0, then color is red, else color is turquoise
+        setTimeout(() => {
+          barOneStyle.backgroundColor = color; // Change color of bar one
+          barTwoStyle.backgroundColor = color; // Change color of bar two
+        }, i * 4 ); // Change color every 10 milliseconds
+      } else {
+        setTimeout(() => {
+          const [barOneIdx, newHeight] = newAnimations[i]; // Destructuring
+          const barOneStyle = arrayBars[barOneIdx].style; // Bar one style
+          barOneStyle.height = `${newHeight}px`; // Change height of bar one
+        }, i * 4); // Change height every 4 milliseconds
+      }
+    }
   }
+
+
 
   render() {
     const {array} = this.state; // Destructuring array from state
