@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #821616;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Aligns items horizontally and responsively */
+  justify-content: center; /* Centers the navigation items */
+}
+
+nav ul li {
+  margin: 0 15px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em; /* Slightly larger font size */
+  padding: 5px 10px; /* Padding for clickable area */
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #a83232; /* Hover and active state background */
+  border-radius: 5px; /* Rounded corners for the buttons */
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #821616;
+  color: #fff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  nav ul {
+      flex-direction: column; /* Stacks the navigation items */
+  }
+  nav ul li {
+      margin: 5px 0; /* Adjust margin for stacked items */
+  }
+}

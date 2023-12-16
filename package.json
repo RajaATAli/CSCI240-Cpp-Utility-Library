@@ -1,0 +1,27 @@
+{
+  "name": "csci240-cpp-utility-library",
+  "version": "1.0.0",
+  "description": "![Library Version](https://img.shields.io/badge/version-0.1.0-blue) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange) ![License](https://img.shields.io/badge/license-MIT-green)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raja Allmdar Tariq Ali",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaATAli/CSCI240-Cpp-Utility-Library.git"
+  },
+  "keywords": [
+    "Cpp",
+    "Utility",
+    "Library"
+  ],
+  "bugs": {
+    "url": "https://github.com/RajaATAli/CSCI240-Cpp-Utility-Library/issues"
+  },
+  "homepage": "https://github.com/RajaATAli/CSCI240-Cpp-Utility-Library#readme",
+  "dependencies": {
+    "d3": "^7.8.5"
+  }
+}
