@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  border: 1px solid black;
+}
+
+#controls {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 0 10px;
+  padding: 5px 15px;
+}
