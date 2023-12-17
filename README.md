@@ -1,8 +1,10 @@
-# CSCI240 C++ Utility Library
+# CSCI240 C++ Utility Library & Data Structures and Algorithms Visualizer 
 
 ![Library Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![C++](https://img.shields.io/badge/C++-11-red)
+![React](https://img.shields.io/badge/React-16.13.1-blue)
 
 ## Table of Contents
 - [Description](#description)
@@ -16,18 +18,20 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Description
-This repository is dedicated to the students of CSCI240 (Computing II). It houses an Open-Source C++ Utility Library that captures a vast array of algorithms and data structures covered throughout the semester. The library is designed to be a practical tool for both current and future batches, blending theoretical understanding with real-world application. Contributing to this repository may also be a way to better prepare yourself for CSCI36200 (Data Structures and Algorithms)
+This repository is dedicated to the students of CSCI240 (Computing II). As a teaching assistant for the course, I housed an Open-Source C++ Utility Library that captures a vast array of algorithms and data structures covered throughout the semester. The library is designed to be a practical tool for both current and future batches, blending theoretical understanding with real-world application. Furthermore, the library is accompanied by a web-based visualizer that allows students to see the algorithms and data structures in action. The algorithm sorting visualizer is built using React.js, an open-source JavaScript library for building user interfaces, and its build was integrated into the static website for the library Contributing to this repository may also be a way to better prepare yourself for CSCI36200 (Data Structures and Algorithms)
 
 ## Goals
 - **Knowledge Repository:** Serve as a go-to resource for current and future students, assisting them in reviewing and understanding key course concepts.
 - **Hands-on Experience:** Provide students with the opportunity to apply theoretical knowledge in a real-world coding and collaborative environment.
+- **Community:** Foster a community of students and educators who are passionate about learning and teaching.
 
 ## Installation and Usage
-To get started with the CSCI240 C++ Utility Library, follow these steps to clone the repository and set up the library on your local machine.
+To get started with the CSCI240 C++ Utility Library and Visualizer, follow these steps to clone the repository and set up the library on your local machine.
 
 ##### Prerequisites
 - A modern C++ compiler (supporting at least C++98 standard)
 - Git (for cloning the repository)
+- CppUnit (for running unit tests)
 
 ##### Steps
 1. **Clone the repository within your environment**
@@ -46,9 +50,21 @@ The library includes unit tests to ensure the reliability and correctness of its
 - To clean up generated object files and executables
 `make clean`
 
-##### Writing New Tests
+###### *Writing New Tests*
 - If you wish to add new tests, create a `.cpp` file in the `Tests/` directory.
 - Make sure to register the test suite and include necessary headers.
+
+4. **Running the Sorting Visualizer**
+The algorithm sorting visualizer is a React application that allows you to see the sorting algorithm. To run the visualizer, follow these steps:
+- Navigate to the `sorting-visualizer/` directory.
+- Install the dependencies by running `npm install`.
+- Start the development server by running `npm start`.
+- The visualizer should now be running on `localhost:3000`.
+
+To run the static build of the website, and see other data structures visualized, as well as the sorting visualizer, follow these steps:
+- Navigate to the `Web-Visualization/` directory.
+- Open the `index.html` file in your browser.
+- The static build of the website should now be running.
 
 ##### Exploring and Running Demonstrations
 - The actual implementations of algorithms and data structures are located in their respective directories. Browsing through these files will help you understand the coding patterns and implementations in C++.
@@ -64,6 +80,8 @@ g++ -o BubbleSortDemo BubbleDemo.cpp
 - `Data-Structures/`: Houses various data structure implementations.
 - `Tests/`: Unit tests for the library components.
 - `Documentation/`: In-depth descriptions, use-cases, and examples for each algorithm and data structure.
+- `Web-Visualization/`: Houses the web visualizer for the algorithms and data structures.
+- `sorting-visualizer/`: React.js application for the algorithm sorting web visualizer. (Build was integrated into the static website for the library)
 
 ## Contributing
 We welcome contributions from students and educators alike. If you wish to contribute:
